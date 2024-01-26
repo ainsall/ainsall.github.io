@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAMERAN SENI</title>
+    <link rel="stylesheet" href="w3.css">
+    <style>
+        body {
+            max-width: 100%;
+            height: auto;
+            font-style: italic;
+        }
+
+        .image-container {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .w3-bar {
+            background-color: #9c1010;
+            color: rgb(8, 8, 8);
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .w3-bar-item.w3-button {
+            background-color: #9c1010;
+            color: white;
+            margin: 0 10px;
+        }
+
+        .dropbtn {
+            background-color: #9c1010;
+            color: white;
+            padding: 14px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color:white;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            margin-top: 16px;
+        }
+
+        .dropdown-content button {
+            color: black;
+            padding: 10px 10px;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            border: none;
+            background: none;
+            text-align: left;
+        }
+
+        .dropdown-content button:hover {
+            background-color: #cec9c9b7;
+        }
+
+        .show {
+            display: block;
+            margin-top: 50px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .content{
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+    <img src="bannerart.jpg" style="width: 100%; height: 200px;">
+
+    <div class="w3-bar w3-card-4">
+        <button class="w3-bar-item w3-button" onclick="showContent('Profil')"> Profil</button>
+        <button class="w3-bar-item w3-button" onclick="showContent('Jakarta Biennale 2021')">Jakarta Biennale 2021</button>
+        <button class="w3-bar-item w3-button" onclick="showContent('Indonesia Contemporary Art & Desain')">Indonesia Contemporary Art & Desain</button>
+        <button class="w3-bar-item w3-button" onclick="showContent('Pameran Art Jakarta')"> Pameran Art Jakarta</button>
+
+        <div class="w3-dropdown-click">
+            <button onclick="toggleDropdown()" class="dropbtn w3-bar-item w3-button">Karya Seni Rupa</button>
+            <div id="myDropdown" class="dropdown-content">
+                <button class="colored" onclick="showContent('Lukisan')">Lukisan</button>
+                <button class="colored" onclick="showContent('Patung')">Patung</button>
+                <button class="colored" onclick="showContent('Arsitektur')">Arsitektur</button>
+                <button class="colored" onclick="showContent('Ukir')">Ukir</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="content-Profil" class="image-container">
+        <h2><b>Biodata</b></h2>
+        <img src="Profil.jpg" alt="Profil" style="width: 400px; height: 300px;">
+        <h5>Nama: Nur Ain Salimah</h5>
+        <p>Nim: 10123049</p>
+        <P>Kelas: IF-1</P>
+        <p>Prodi: Teknik Informatika</p>
+        <P>Email: nurainsalimah1@gmail.com</P>
+    </div>
+
+    <div id="content-Jakarta Biennale 2021" class="image-container hidden">
+        <h5>Festival ini telah menggalang kolaborasi dengan berbagai pihak, baik pemerintah, warga, seniman, maupun ekosistem pekerja kreatif, dalam menghidupkan dinamika budaya kota dan mengembangkan ekonomi kota. Tema yang dipilih untuk setiap edisinya merupakan upaya untuk memperluas wacana budaya dan seni visual, terutama yang menginspirasi dan memantik perbincangan untuk merespons perubahan yang terus terjadi di segala aspek kehidupan
+        </h5>          
+        <img src="jakarta binnale.jpg" alt="Jakarta Biennale 2021" style="width: 600px; height: 200px;">
+    </div>
+
+    <div id="content-Indonesia Contemporary Art & Desain" class="image-container hidden">
+        <h5>Selama lebih dari 10 tahun, Indonesian Contemporary Art & Design (ICAD) telah memamerkan lebih dari 500 karya seni dan desain dari para seniman, desainer, dan kreatif, menyelenggarakan lebih dari 100 program dengan mitra kolaborasi, serta membuka pintunya bagi jutaan penikmat seni dan desain.</h5>
+        <img src="indonesiajpg.jpg" alt="Indonesia" style="width: 600px; height: 200px;">
+    </div>
+
+    <div id="content-Pameran Art Jakarta" class="image-container hidden">
+        <h5>Art Jakarta adalah pameran seni unggulan di Indonesia, dengan fokus jelas pada Asia Tenggara. Diselenggarakan di pusat seni kontemporer yang dinamis di kawasan ini, ini adalah forum internasional yang dinamis untuk semua pemangku kepentingan ekosistem seni yang penting ini. Tahun ini Art Jakarta 2023 akan diselenggarakan pada 17-19 November di JIExpo Kemayoran Jakarta.</h5>
+        <img src="artjakarta.jpg" alt="Art Jakarta" style="width: 600px; height: 200px;">
+    </div>
+
+    <div id="content-Lukisan" class="image-container hidden">
+        <h5>Seni lukis adalah salah satu cabang dari seni rupa yang berfokus pada kegiatan melukis. Dengan dasar pengertian yang sama, seni lukis adalah sebuah pengembangan yang lebih utuh dari menggambar. Melukis adalah kegiatan mengolah medium dua dimensi atau permukaan dari objek tiga dimensi untuk mendapat kesan tertentu.</h5>
+        <img src="lukisan.jpg" alt="Art Jakarta" style="width: 600px; height: 200px;">
+    </div>
+
+    <div id="content-Patung" class="image-container hidden">
+        <h5>Seni patung atau seni pahat adalah cabang seni rupa yang hasil karyanya berwujud tiga dimensi. Biasanya diciptakan dengan cara memahat, modeling atau kasting.</h5>
+        <img src="patungjpeg.jpeg" alt="Art Jakarta" style="width: 600px; height: 200px;">
+    </div>
+
+    <div id="content-Arsitektur" class="image-container hidden">
+        <h5>seni arsitektur diartikan sebagai kegiatan merancang dan membangun untuk keseluruhan lingkungan binaan level makro, contoh; perencanaan kota atau taman kota.</h5>
+        <img src="Arsitektur.jpg" alt="Art Jakarta" style="width: 600px; height: 200px;">
+    </div>
+
+    <div id="content-Ukir" class="image-container hidden">
+        <h5>Seni ukir adalah seni membentuk gambar pada kayu, tempurung, bambu, batu, logam, dan bahan lainnya. Hasilnya berupa gambar atau hiasan yang indah, dengan bagian-bagian yang cekung dan cembung atau berlubang (tembus).</h5>
+        <img src="literatur.jpg" alt="Art Jakarta" style="width: 600px; height: 200px;">
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("myDropdown");
+            dropdown.classList.toggle("show");
+        }
+
+        function showContent(contentId) {
+            // Sembunyikan semua elemen konten
+            var contents = document.querySelectorAll('.image-container');
+            contents.forEach(function (content) {
+                content.classList.add('hidden');
+            });
+
+            // Tampilkan konten yang dipilih
+            var selectedContent = document.getElementById('content-' + contentId);
+            if (selectedContent) {
+                selectedContent.classList.remove('hidden');
+            }
+
+            // Tutup menu dropdown
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
